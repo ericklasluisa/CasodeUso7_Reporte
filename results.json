@@ -1,0 +1,132 @@
+[
+  {
+    "uri": "Feature/reporte.feature",
+    "id": "actualizar-veh\u00edculo",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Actualizar veh\u00edculo",
+    "description": "",
+    "elements": [
+      {
+        "id": "generar-un-reporte",
+        "line": 3,
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "Generar un reporte",
+        "description": "",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given",
+            "line": 4,
+            "name": "Se inicia el navegador",
+            "result": {
+              "status": "passed",
+              "duration": 2.2337355613708496
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 5,
+            "name": "Entra a la seccion reporte",
+            "result": {
+              "status": "passed",
+              "duration": 0.3576242923736572
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And",
+            "line": 6,
+            "name": "Llenar el campo ID Viaje 125",
+            "result": {
+              "status": "passed",
+              "duration": 0.1690528392791748
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And",
+            "line": 7,
+            "name": "Aplastar el boton para buscar",
+            "result": {
+              "status": "passed",
+              "duration": 5.135642051696777
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 8,
+            "name": "Visualizar reporte viaje",
+            "result": {
+              "status": "passed",
+              "duration": 5.095908880233765
+            }
+          }
+        ]
+      },
+      {
+        "id": "ingresar-una-id-de-viaje-incorrecto",
+        "line": 10,
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "Ingresar una id de viaje incorrecto",
+        "description": "",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given",
+            "line": 11,
+            "name": "Se inicia el navegador",
+            "result": {
+              "status": "passed",
+              "duration": 1.6300084590911865
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 12,
+            "name": "Entra a la seccion reporte",
+            "result": {
+              "status": "passed",
+              "duration": 0.36777424812316895
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And",
+            "line": 13,
+            "name": "Llenar el campo ID Viaje 111",
+            "result": {
+              "status": "passed",
+              "duration": 0.1659996509552002
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And",
+            "line": 14,
+            "name": "Aplastar el boton para buscar",
+            "result": {
+              "status": "passed",
+              "duration": 5.136261224746704
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 15,
+            "name": "Visualizar reporte viaje",
+            "result": {
+              "status": "failed",
+              "duration": 0.015999794006347656
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
