@@ -39,7 +39,7 @@ def mark_step_as_failed(context, step_name, exception):
 def mark_step_as_passed(context, step_name):
     print(f"Step passed: {step_name}")
 
-@given('Se inicia el navegador')
+@given('Se inicia el navegador generar reporte')
 def iniciarNavegador(context):
     context.driver = webdriver.Chrome(options=options)
     context.failed_steps = []
@@ -49,22 +49,22 @@ def iniciarNavegador(context):
 def entrar_seccion_reporte(context):
     try:
         context.driver.maximize_window()
-        context.driver.get("C:\\Users\\erick\\Desktop\\ESPE\\QUINTO SEMESTRE\\REQUISITOS\\PRUEBAS-RF\\CU7\\Reporte\\Reporte.html")
+        context.driver.get("C:\\Users\\erick\\Desktop\\ESPE\\QUINTO SEMESTRE\\REQUISITOS\\PRUEBAS-RF\\CU7\\Reporte\\GenerarReporte.html")
         take_screenshot(context, '1. Entra a la seccion reporte')
         print("Entered 'Reporte' section")
     except Exception as e:
         mark_step_as_failed(context, 'entra_seccion_reporte', e)
 
-@when('Llenar el campo ID Viaje {id_viaje}')
+@when('Llenar en reporte el campo ID Viaje {id_viaje}')
 def actualizar_id_viaje(context, id_viaje):
     try:
         id_viaje_field = context.driver.find_element(By.XPATH, '//*[@id="idViaje"]')
         id_viaje_field.send_keys(id_viaje)
-        take_screenshot(context, '2. Llenar el campo ID Viaje')
+        take_screenshot(context, '2. Llenar en reporte el campo ID Viaje')
     except Exception as e:
         mark_step_as_failed(context, 'actualizar_id_viaje', e)
 
-@when('Aplastar el boton para buscar')
+@when('Aplastar el boton para buscar reporte')
 def aplastar_boton_buscar(context):
     try:
         buscar_button = context.driver.find_element(By.XPATH, '//*[@id="lupa"]')
